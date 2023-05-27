@@ -1,11 +1,19 @@
-import Button from "./Button";
+import { GoBell } from "react-icons/go";
+import { FaThumbsUp } from "react-icons/fa";
 
+import Button from "./Button";
 const App = () => {
   return (
     <div style={{ columns: 4 }}>
       <div>
-        <Button>Plain</Button>
-        <Button primary>Primary</Button>
+        <Button>
+          <GoBell />
+          Plain
+        </Button>
+        <Button primary>
+          <FaThumbsUp />
+          Primary
+        </Button>
         <Button secondary>Secondary</Button>
         <Button success>Success</Button>
         <Button warning>Warning</Button>
