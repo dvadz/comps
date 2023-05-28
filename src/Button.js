@@ -31,11 +31,7 @@ const Button = ({
     }
   );
 
-  return (
-    <div>
-      <button className={classes}>{children}</button>
-    </div>
-  );
+  return <button className={classes}>{children}</button>;
 };
 
 Button.propTypes = {

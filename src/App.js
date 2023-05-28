@@ -6,74 +6,116 @@ const App = () => {
   return (
     <div style={{ columns: 4 }}>
       <div>
-        <Button>
-          <GoBell />
-          Plain
-        </Button>
-        <Button primary>
-          <FaThumbsUp />
-          Primary
-        </Button>
-        <Button secondary>Secondary</Button>
-        <Button success>Success</Button>
-        <Button warning>Warning</Button>
-        <Button danger>Danger </Button>
+        <div>
+          <Button>Plain</Button>
+        </div>
+        <div>
+          <Button primary>Primary</Button>
+        </div>
+        <div>
+          <Button secondary>Secondary</Button>
+        </div>
+        <div>
+          <Button success>Success</Button>
+        </div>
+        <div>
+          <Button warning>Warning</Button>
+        </div>
+        <div>
+          <Button danger>Danger </Button>
+        </div>
       </div>
       <div>
-        <Button rounded>Plain</Button>
-        <Button primary rounded>
-          Primary
-        </Button>
-        <Button secondary rounded>
-          Secondary
-        </Button>
-        <Button success rounded>
-          Success
-        </Button>
-        <Button warning rounded>
-          Warning
-        </Button>
-        <Button danger rounded>
-          Danger
-        </Button>
+        <div>
+          <Button rounded>Plain Rounded</Button>
+        </div>
+        <div>
+          <Button primary rounded>
+            Primary Rounded
+          </Button>
+        </div>
+        <div>
+          <Button secondary rounded>
+            Secondary Rounded
+          </Button>
+        </div>
+        <div>
+          <Button success rounded>
+            Success Rounded
+          </Button>
+        </div>
+        <div>
+          <Button warning rounded>
+            Warning Rounded
+          </Button>
+        </div>
+        <div>
+          <Button danger rounded>
+            Danger Rounded
+          </Button>
+        </div>
       </div>
       <div>
-        <Button outline>Plain</Button>
-        <Button primary outline>
-          Primary
-        </Button>
-        <Button secondary outline>
-          Secondary
-        </Button>
-        <Button success outline>
-          Success
-        </Button>
-        <Button warning outline>
-          Warning
-        </Button>
-        <Button danger outline>
-          Danger
-        </Button>
+        <div>
+          <Button outline>Plain</Button>
+        </div>
+        <div>
+          <Button primary outline>
+            Primary Outline
+          </Button>
+        </div>
+        <div>
+          <Button secondary outline>
+            Secondary Outline
+          </Button>
+        </div>
+        <div>
+          <Button success outline>
+            Success Outline
+          </Button>
+        </div>
+        <div>
+          <Button warning outline>
+            Warning Outline
+          </Button>
+        </div>
+        <div>
+          <Button danger outline>
+            Danger Outline
+          </Button>
+        </div>
       </div>
       <div>
-        <Button outline rounded>
-          Plain
-        </Button>
-        <Button primary rounded outline>
-          Primary
-        </Button>
-        <Button secondary rounded outline>
-          Secondary
-        </Button>
-        <Button success rounded outline>
-          Success
-        </Button>
-        <Button warning rounded outline>
-          Warning
-        </Button>
-        <Button danger rounded outline>
-          Danger
-        </Button>
+        <div>
+          <Button outline rounded>
+            Plain
+          </Button>
+        </div>
+        <div>
+          <Button primary rounded outline>
+            Primary
+          </Button>
+        </div>
+        <div>
+          <Button secondary rounded outline>
+            Secondary
+          </Button>
+        </div>
+        <div>
+          <Button success rounded outline>
+            Success
+          </Button>
+        </div>
+        <div>
+          <Button warning rounded outline>
+            Warning
+          </Button>
+        </div>
+        <div>
+          <Button danger rounded outline>
+            Danger
+          </Button>
+        </div>
       </div>
     </div>
   );
