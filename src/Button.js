@@ -12,23 +12,22 @@ const Button = ({
 }) => {
   let classes = classNames(
     // default, always applied
-    "border-2 px-3 py-1.5 m-1 flex items-center",
+    "border-2 px-3 py-1.5 m-1",
     {
-      //  variant
-      "border-blue-500 bg-blue-500 text-white": primary,
-      "border-gray-600 bg-gray-600 text-white": secondary,
-      "border-green-500 bg-green-500 text-white": success,
-      "border-yellow-400 bg-yellow-400 text-white": warning,
-      "border-red-500 bg-red-500 text-white": danger,
+      //  NOT outline
+      "border-blue-500    bg-blue-500   text-white": primary && !outline,
+      "border-gray-600    bg-gray-600   text-white": secondary && !outline,
+      "border-green-500   bg-green-500  text-white": success && !outline,
+      "border-yellow-400  bg-yellow-400 text-white": warning && !outline,
+      "border-red-500     bg-red-500    text-white": danger && !outline,
+      // outline
+      "border-blue-500    text-blue-500": primary && outline,
+      "border-gray-600    text-gray-600": secondary && outline,
+      "border-green-500   text-green-500": success && outline,
+      "border-yellow-400  text-yellow-400": warning && outline,
+      "border-red-500     text-red-500": danger && outline,
       // rounded
       "rounded-full": rounded,
-      // outline
-      "bg-white": outline,
-      "text-blue-600": outline && primary,
-      "text-gray-900": outline && secondary,
-      "text-green-600": outline && success,
-      "text-yellow-400": outline && warning,
-      "text-red-600": outline && danger,
     }
   );
 
