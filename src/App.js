@@ -3,11 +3,14 @@ import { FaThumbsUp } from "react-icons/fa";
 
 import Button from "./Button";
 const App = () => {
+  const handleClick = () => {
+    console.log("Click at", Date.now());
+  };
   return (
     <div style={{ columns: 4 }}>
       <div>
         <div>
-          <Button>Plain</Button>
+          <Button onClick={handleClick}>Plain</Button>
         </div>
         <div>
           <Button primary>Primary</Button>
