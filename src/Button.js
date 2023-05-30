@@ -9,6 +9,7 @@ const Button = ({
   danger,
   outline,
   rounded,
+  ...rest
 }) => {
   let classes = classNames(
     // default, always applied
@@ -31,7 +32,11 @@ const Button = ({
     }
   );
 
-  return <button className={classes}>{children}</button>;
+  return (
+    <button {...rest} className={classes}>
+      {children}
+    </button>
+  );
 };
 
 Button.propTypes = {
