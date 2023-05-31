@@ -13,7 +13,7 @@ const Button = ({
 }) => {
   let classes = classNames(
     // default, always applied
-    "border-2 px-3 py-1.5 m-1",
+    "border-2 px-3 py-1.5 m-1 flex items-center",
     {
       //  NOT outline
       "border-blue-500    bg-blue-500   text-white": primary && !outline,

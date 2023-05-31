@@ -10,10 +10,16 @@ const App = () => {
     <div style={{ columns: 4 }}>
       <div>
         <div>
-          <Button onClick={handleClick}>Plain</Button>
+          <Button onClick={handleClick}>
+            <GoBell />
+            Plain
+          </Button>
         </div>
         <div>
-          <Button primary>Primary</Button>
+          <Button primary>
+            <FaThumbsUp />
+            Primary
+          </Button>
         </div>
         <div>
           <Button secondary>Secondary</Button>
