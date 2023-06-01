@@ -1,7 +1,7 @@
 import { GoBell } from "react-icons/go";
 import { FaThumbsUp } from "react-icons/fa";
+import Button from "./components/Button";
 
-import Button from "./Button";
 const App = () => {
   const handleClick = () => {
     console.log("Click at", Date.now());
