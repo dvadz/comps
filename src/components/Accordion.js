@@ -14,6 +14,7 @@ const Accordion = ({ items }) => {
           onClick={() => {
             setExpandedItem(index);
           }}
+          className="flex p-2 bg-gray-50 items-center cursor-pointer justify-between"
         >
           <span>{item.label}</span>
           <span>{icon}</span>
