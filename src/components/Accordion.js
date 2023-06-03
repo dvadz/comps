@@ -4,6 +4,7 @@ const Accordion = ({ items }) => {
   const [expandedItem, setExpandedItem] = useState(0);
 
   const renderedItems = items.map((item, index) => {
+    const content = index === expandedItem ? <div>{item.content}</div> : false;
     return (
       <div key={item.id}>
         <div
@@ -13,7 +14,7 @@ const Accordion = ({ items }) => {
         >
           {item.label}
         </div>
-        <div>{item.content}</div>
+        {content}
       </div>
     );
   });
