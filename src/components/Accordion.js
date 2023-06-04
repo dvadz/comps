@@ -7,8 +7,12 @@ const Accordion = ({ items }) => {
 
   const renderedItems = items.map((item, index) => {
     const isExpanded = index === expandedItem;
-    const content = isExpanded ? <div>{item.content}</div> : false;
     const icon = isExpanded ? <GoChevronDown /> : <GoChevronLeft />;
+    const content = isExpanded ? (
+      <div className="border-b border-t p-5">{item.content}</div>
+    ) : (
+      false
+    );
 
     return (
       <div key={item.id}>
@@ -21,11 +25,7 @@ const Accordion = ({ items }) => {
           <span>{item.label}</span>
           <span className="text-xl">{icon}</span>
         </div>
-        {index === expandedItem ? (
-          <div className="border-b border-t p-5">{item.content}</div>
-        ) : (
-          false
-        )}
+        {content}
       </div>
     );
   });
