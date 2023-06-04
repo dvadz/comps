@@ -18,7 +18,8 @@ const Accordion = ({ items }) => {
       <div key={item.id}>
         <div
           onClick={() => {
-            setExpandedItem(index);
+            if (index === expandedItem) setExpandedItem(-1);
+            else setExpandedItem(index);
           }}
           className="flex p-3 bg-gray-50 items-center cursor-pointer justify-between"
         >
