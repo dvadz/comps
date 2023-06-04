@@ -3,7 +3,7 @@ import { BiChevronSquare, BiChevronDownSquare } from "react-icons/bi";
 import { GoChevronDown, GoChevronLeft } from "react-icons/go";
 
 const Accordion = ({ items }) => {
-  const [expandedItem, setExpandedItem] = useState(0);
+  const [expandedItem, setExpandedItem] = useState(-1);
 
   const renderedItems = items.map((item, index) => {
     const isExpanded = index === expandedItem;
