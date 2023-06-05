@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { BiChevronSquare, BiChevronDownSquare } from "react-icons/bi";
 import { GoChevronDown, GoChevronLeft } from "react-icons/go";
 
 const Accordion = ({ items }) => {
