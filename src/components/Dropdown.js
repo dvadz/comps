@@ -25,9 +25,12 @@ const Dropdown = ({ options, selection, onSelect }) => {
     setIsOpen(!isOpen);
   };
 
+  let content = "Select...";
+  if (selection) content = selection.value;
+
   return (
     <div>
-      <div onClick={handleClick}>Select...</div>
+      <div onClick={handleClick}>{content}</div>
       {isOpen && <div>{renderedOptions}</div>}
     </div>
   );
