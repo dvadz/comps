@@ -7,9 +7,15 @@ const Dropdown = ({ options }) => {
     return <div key={option.value}>{option.label}</div>;
   });
 
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div>
-      <div>Select...</div>
+      <div on onClick={handleClick}>
+        Select...
+      </div>
       {isOpen && <div>{renderedOptions}</div>}
     </div>
   );
