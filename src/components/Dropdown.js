@@ -3,13 +3,18 @@ import { useState } from "react";
 const Dropdown = ({ options }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleOptionClick = () => {
+  const handleOptionClick = (option) => {
     setIsOpen(false);
   };
 
   const renderedOptions = options.map((option) => {
     return (
-      <div key={option.value} onClick={handleOptionClick}>
+      <div
+        key={option.value}
+        onClick={(event) => {
+          handleOptionClick(option);
+        }}
+      >
         {option.label}
       </div>
     );
