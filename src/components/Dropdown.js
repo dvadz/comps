@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AiOutlineDownCircle, AiOutlineLeftCircle } from "react-icons/ai";
 
 const Dropdown = ({ options, value, onChange }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,6 +27,8 @@ const Dropdown = ({ options, value, onChange }) => {
     setIsOpen(!isOpen);
   };
 
+  const icon = isOpen ? <AiOutlineDownCircle /> : <AiOutlineLeftCircle />;
+
   return (
     <div className="w-48 relative">
       <div
@@ -33,6 +36,7 @@ const Dropdown = ({ options, value, onChange }) => {
         onClick={handleClick}
       >
         <div>{value?.label || "Select..."}</div>
+        <div className="text-lg">{icon}</div>
       </div>
       {isOpen && (
         <div className="absolute top-full border rounded p3 shadow bg-white w-full">
