@@ -39,7 +39,7 @@ const Dropdown = ({ options, value, onChange }) => {
         <div className="text-lg">{icon}</div>
       </div>
       {isOpen && (
-        <div className="absolute top-full border rounded p3 shadow bg-white w-full">
+        <div className="absolute top-full border rounded p-3 shadow bg-white w-full">
           {renderedOptions}
         </div>
       )}
