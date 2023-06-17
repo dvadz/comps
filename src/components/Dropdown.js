@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { AiOutlineDownCircle, AiOutlineLeftCircle } from "react-icons/ai";
+import Panel from "./Panel";
 
 const Dropdown = ({ options, value, onChange }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,18 +32,14 @@ const Dropdown = ({ options, value, onChange }) => {
 
   return (
     <div className="w-48 relative">
-      <div
-        className="flex justify-between items-center cursor-pointer border rounded p-3 shadow bg-white w-full"
+      <Panel
+        className="flex justify-between items-center cursor-pointer"
         onClick={handleClick}
       >
         <div>{value?.label || "Select..."}</div>
         <div className="text-lg">{icon}</div>
-      </div>
-      {isOpen && (
-        <div className="absolute top-full border rounded p-3 shadow bg-white w-full">
-          {renderedOptions}
-        </div>
-      )}
+      </Panel>
+      {isOpen && <Panel className="absolute top-full">{renderedOptions}</Panel>}
     </div>
   );
 };
