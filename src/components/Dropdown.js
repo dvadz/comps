@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AiOutlineDownCircle, AiOutlineLeftCircle } from "react-icons/ai";
 import Panel from "./Panel";
 
@@ -7,7 +7,18 @@ const Dropdown = ({ options, value, onChange }) => {
 
   const ref = useRef();
 
-  console.log(ref.current);
+  useEffect(() => {
+    const handler = (event) => {
+      console.log(event.target);
+    };
+
+    document.addEventListener("click", handler, true);
+
+    return () => {
+      document.removeEventListener("click", handler);
+    };
+  }, []);
+
   const handleOptionClick = (option) => {
     setIsOpen(false);
     onChange(option);
