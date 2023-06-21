@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { AiOutlineDownCircle, AiOutlineLeftCircle } from "react-icons/ai";
 import Panel from "./Panel";
 
 const Dropdown = ({ options, value, onChange }) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const ref = useRef();
+
+  console.log(ref.current);
   const handleOptionClick = (option) => {
     setIsOpen(false);
     onChange(option);
@@ -31,7 +34,7 @@ const Dropdown = ({ options, value, onChange }) => {
   const icon = isOpen ? <AiOutlineDownCircle /> : <AiOutlineLeftCircle />;
 
   return (
-    <div className="w-48 relative">
+    <div ref={ref} className="w-48 relative">
       <Panel
         className="flex justify-between items-center cursor-pointer"
         onClick={handleClick}
