@@ -5,6 +5,11 @@ const Link = ({ to, children }) => {
   const { navigate } = useContext(NavigationContext);
 
   const handler = (event) => {
+    console.log(event);
+    if (event.metaKey || event.ctrlKey || event.shiftKey) {
+      console.log("Command");
+      return;
+    }
     event.preventDefault();
     navigate(to);
   };
