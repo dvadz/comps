@@ -9,7 +9,11 @@ const Link = ({ to, children }) => {
     navigate(to);
   };
 
-  return <a onClick={handler}>{children}</a>;
+  return (
+    <a href={to} onClick={handler}>
+      {children}
+    </a>
+  );
 };
 
 export default Link;
