@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import NavigationContext from "../context/navigation";
+import classNames from "classnames";
 
 const Link = ({ to, children }) => {
   const { navigate } = useContext(NavigationContext);
@@ -14,8 +15,9 @@ const Link = ({ to, children }) => {
     navigate(to);
   };
 
+  const classes = classNames("text-blue-500");
   return (
-    <a href={to} onClick={handler}>
+    <a href={to} onClick={handler} className={classes}>
       {children}
     </a>
   );
