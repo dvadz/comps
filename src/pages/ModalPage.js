@@ -5,12 +5,16 @@ import Modal from "../components/Modal";
 const ModalPage = () => {
   const [showModal, setShowModal] = useState(false);
 
+  const handleClick = () => {
+    setShowModal(true);
+  };
+
   return (
     <div>
-      <Button primary rounded>
+      <Button primary rounded onClick={handleClick}>
         Open Modal
       </Button>
-      <Modal />
+      {showModal && <Modal />}
     </div>
   );
 };
