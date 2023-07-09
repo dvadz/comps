@@ -13,7 +13,11 @@ const ModalPage = () => {
     setShowModal(false);
   };
 
-  const modal = <Modal onClose={handleClose} />;
+  const modal = (
+    <Modal onClose={handleClose}>
+      <p>Terms of Conditions</p>
+    </Modal>
+  );
 
   return (
     <div>
