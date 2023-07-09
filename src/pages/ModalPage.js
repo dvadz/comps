@@ -13,8 +13,14 @@ const ModalPage = () => {
     setShowModal(false);
   };
 
+  const actionBar = (
+    <Button primary onClick={handleClose}>
+      Accept
+    </Button>
+  );
+
   const modal = (
-    <Modal onClose={handleClose}>
+    <Modal onClose={handleClose} actionBar={actionBar}>
       <p>Terms of Conditions</p>
     </Modal>
   );
