@@ -1,4 +1,4 @@
-const Table = ({ data }) => {
+const Table = ({ data, config }) => {
   const renderedRows = data.map((fruit) => {
     return (
       <tr className="border-b" key={fruit.name}>

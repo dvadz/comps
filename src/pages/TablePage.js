@@ -7,8 +7,10 @@ const data = [
   { name: "apple", color: "bg-red-500", score: 3 },
 ];
 
+const config = [{ label: "Name" }, { label: "Color" }, { label: "Score" }];
+
 const TablePage = () => {
-  return <Table data={data} />;
+  return <Table data={data} config={config} />;
 };
 
 export default TablePage;
