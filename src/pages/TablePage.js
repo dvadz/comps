@@ -12,7 +12,10 @@ const config = [
     label: "Name",
     render: (rowData) => rowData.name,
   },
-  { label: "Color", render: (rowData) => rowData.color },
+  {
+    label: "Color",
+    render: (rowData) => <div className={` p-3 m-2 ${rowData.color}`}></div>,
+  },
   { label: "Score", render: (rowData) => rowData.score },
 ];
 
