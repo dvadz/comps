@@ -7,7 +7,14 @@ const data = [
   { name: "apple", color: "bg-red-500", score: 3 },
 ];
 
-const config = [{ label: "Name" }, { label: "Color" }, { label: "Score" }];
+const config = [
+  {
+    label: "Name",
+    render: (rowData) => rowData.name,
+  },
+  { label: "Color", render: (rowData) => rowData.color },
+  { label: "Score", render: (rowData) => rowData.score },
+];
 
 const TablePage = () => {
   return <Table data={data} config={config} />;
