@@ -19,8 +19,12 @@ const config = [
   { label: "Score", render: (rowData) => rowData.score },
 ];
 
+const keyFn = (fruit) => {
+  return fruit.name;
+};
+
 const TablePage = () => {
-  return <Table data={data} config={config} />;
+  return <Table data={data} config={config} keyFn={keyFn} />;
 };
 
 export default TablePage;
