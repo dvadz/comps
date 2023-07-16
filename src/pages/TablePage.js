@@ -16,7 +16,11 @@ const config = [
     label: "Color",
     render: (rowData) => <div className={` p-3 m-2 ${rowData.color}`}></div>,
   },
-  { label: "Score", render: (rowData) => rowData.score },
+  {
+    label: "Score",
+    render: (rowData) => rowData.score,
+    header: () => <th className="bg-red-500">Score</th>,
+  },
 ];
 
 const keyFn = (fruit) => {
