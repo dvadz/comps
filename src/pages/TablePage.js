@@ -11,6 +11,7 @@ const config = [
   {
     label: "Name",
     render: (rowData) => rowData.name,
+    sortValue: (fruit) => fruit.name,
   },
   {
     label: "Color",
@@ -19,6 +20,7 @@ const config = [
   {
     label: "Score",
     render: (rowData) => rowData.score,
+    sortValue: (fruit) => fruit.score,
   },
 ];
 
