@@ -52,7 +52,7 @@ const SortableTable = (props) => {
     };
   });
 
-  return <Table {...props} config={updatedConfig} />;
+  return <Table {...props} data={updatedData} config={updatedConfig} />;
 };
 
 export default SortableTable;
