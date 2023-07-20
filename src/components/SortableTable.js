@@ -44,6 +44,20 @@ const SortableTable = (props) => {
     });
   }
 
+  const getIcons = (label) => {
+    if (label !== sortBy) {
+      return "DOWN UP ";
+    }
+
+    if (sortOrder === null) {
+      return "DOWN UP ";
+    } else if (sortOrder === "asc") {
+      return "UP ";
+    } else {
+      return "DOWN ";
+    }
+  };
+
   const updatedConfig = config.map((column) => {
     if (!column.sortValue) {
       return column;
@@ -52,7 +66,8 @@ const SortableTable = (props) => {
       ...column,
       header: () => (
         <th onClick={() => handleClick(column.label)}>
-          {column.label} IS SORTABLE
+          {getIcons(column.label)}
+          {column.label}
         </th>
       ),
     };
