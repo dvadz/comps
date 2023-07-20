@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Table from "./Table";
+import { BiChevronUp, BiChevronDown } from "react-icons/bi";
 
 const SortableTable = (props) => {
   const [sortOrder, setSortOrder] = useState(null);
