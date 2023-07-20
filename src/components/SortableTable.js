@@ -47,15 +47,33 @@ const SortableTable = (props) => {
 
   const getIcons = (label) => {
     if (label !== sortBy) {
-      return "DOWN UP ";
+      return (
+        <div>
+          <BiChevronUp />
+          <BiChevronDown />
+        </div>
+      );
     }
 
     if (sortOrder === null) {
-      return "DOWN UP ";
+      return (
+        <div>
+          <BiChevronUp />
+          <BiChevronDown />
+        </div>
+      );
     } else if (sortOrder === "asc") {
-      return "UP ";
+      return (
+        <div>
+          <BiChevronUp />
+        </div>
+      );
     } else {
-      return "DOWN ";
+      return (
+        <div>
+          <BiChevronDown />
+        </div>
+      );
     }
   };
 
@@ -67,8 +85,10 @@ const SortableTable = (props) => {
       ...column,
       header: () => (
         <th onClick={() => handleClick(column.label)}>
-          {getIcons(column.label)}
-          {column.label}
+          <div className="flex items-center">
+            {getIcons(column.label)}
+            {column.label}
+          </div>
         </th>
       ),
     };
