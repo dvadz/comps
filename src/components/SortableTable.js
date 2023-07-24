@@ -1,49 +1,11 @@
-import { useState } from "react";
 import Table from "./Table";
 import { BiChevronUp, BiChevronDown } from "react-icons/bi";
+import useSort from "../hooks/use-sort";
 
 const SortableTable = (props) => {
-  const [sortOrder, setSortOrder] = useState(null);
-  const [sortBy, setSortBy] = useState(null);
-
   const { config, data } = props;
 
-  const handleClick = (label) => {
-    if (sortBy && label !== sortBy) {
-      setSortOrder("asc");
-      setSortBy(label);
-      return;
-    }
-
-    if (sortOrder === null) {
-      setSortOrder("asc");
-      setSortBy(label);
-    } else if (sortOrder === "asc") {
-      setSortOrder("des");
-      setSortBy(label);
-    } else {
-      setSortOrder(null);
-      setSortBy(null);
-    }
-  };
-
-  const updatedData = [...data];
-  const reverseOrder = sortOrder === "asc" ? 1 : -1;
-
-  if (sortBy && sortOrder) {
-    const { sortValue } = config.find((column) => column.label === sortBy);
-
-    updatedData.sort((a, b) => {
-      const valueA = sortValue(a);
-      const valueB = sortValue(b);
-
-      if (typeof valueA === "number") {
-        return (valueA - valueB) * reverseOrder;
-      } else {
-        return valueA.localeCompare(valueB) * reverseOrder;
-      }
-    });
-  }
+  const { sortOrder, sortBy, sortedData, handleClick } = useSort(data, config);
 
   const getIcons = (label) => {
     if (label !== sortBy) {
@@ -97,7 +59,7 @@ const SortableTable = (props) => {
     };
   });
 
-  return <Table {...props} data={updatedData} config={updatedConfig} />;
+  return <Table {...props} data={sortedData} config={updatedConfig} />;
 };
 
 export default SortableTable;
