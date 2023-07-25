@@ -4,7 +4,7 @@ const useSort = (data, config) => {
   const [sortOrder, setSortOrder] = useState(null);
   const [sortBy, setSortBy] = useState(null);
 
-  const handleClick = (label) => {
+  const setSortColumn = (label) => {
     if (sortBy && label !== sortBy) {
       setSortOrder("asc");
       setSortBy(label);
@@ -41,7 +41,7 @@ const useSort = (data, config) => {
     });
   }
 
-  return { sortOrder, sortBy, sortedData, handleClick };
+  return { sortOrder, sortBy, sortedData, setSortColumn };
 };
 
 export default useSort;
