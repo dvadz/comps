@@ -14,7 +14,7 @@ const CounterPage = () => {
 
   return (
     <div>
-      <div>Count: {count}</div>
+      <h1>Count: {count}</h1>
       <Button onClick={handleClick} primary rounded>
         Increment
       </Button>
