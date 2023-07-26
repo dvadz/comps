@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import Button from "../components/Button";
 
-const CounterPage = () => {
-  const [count, setCount] = useState(0);
+const CounterPage = ({ initialCount = 0 }) => {
+  const [count, setCount] = useState(initialCount);
 
   const handleClick = () => {
     setCount(count + 1);
